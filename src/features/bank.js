@@ -3,16 +3,6 @@ import Sound from "./sound";
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// import heater1 from "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
-// import heater2 from "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"
-// import heater3 from "https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"
-// import heater4 from "https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"
-// import clap from "https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"
-// import openhh from "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"
-// import kicknhat from "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
-// import kick from "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"
-// import closedhh from "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
-
 
 /**
  * @type {Array<Sound>}
@@ -51,7 +41,7 @@ const sounds = [
   new Sound(
     "open-hh",
     "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3",
-    "clap",
+    "open-hh",
     "D"
   ),
   new Sound(
