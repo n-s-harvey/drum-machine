@@ -13,13 +13,11 @@ export default function DrumPad(props) {
   const soundURL = props.sound.src;
   const [playSound] = useSound(soundURL);
   const dispatch = useDispatch();
-  // TODO: display doesn't trigger when clicking button
 
   useEffect(() => {
     function handleKeyDown(event) {
       if (event.key.toUpperCase() == props.sound.key) {
-        playSound();
-        dispatch(setDisplay(props.sound.className));
+        dispatchSoundAction();
       }
     }
     document.addEventListener('keydown', handleKeyDown);
@@ -29,10 +27,15 @@ export default function DrumPad(props) {
   }
   )
   return (
-    <Button className="drum-pad" id={props.sound.id} onClick={playSound}
-      className='w-100' style={{ aspectRatio: 1 / 1 }}
+    <Button className="drum-pad w-100" id={props.sound.id} onClick={dispatchSoundAction}
+      style={{ aspectRatio: 1 / 1 }}
     >
       {props.sound.key}
     </Button>
   )
+
+  function dispatchSoundAction() {
+    playSound();
+    dispatch(setDisplay(props.sound.className));
+  }
 }
