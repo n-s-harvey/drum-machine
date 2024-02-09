@@ -68,21 +68,11 @@ const sounds = [
 export default function Bank() {
 
   return (
-    <Container>
-      <Row>
-        <Col><DrumPad sound={sounds.at(0)} /></Col>
-        <Col><DrumPad sound={sounds.at(1)} /></Col>
-        <Col><DrumPad sound={sounds.at(2)} /></Col>
-      </Row>
-      <Row>
-        <Col><DrumPad sound={sounds.at(3)} /></Col>
-        <Col><DrumPad sound={sounds.at(4)} /></Col>
-        <Col><DrumPad sound={sounds.at(5)} /></Col>
-      </Row>
-      <Row>
-        <Col><DrumPad sound={sounds.at(6)} /></Col>
-        <Col><DrumPad sound={sounds.at(7)} /></Col>
-        <Col><DrumPad sound={sounds.at(8)} /></Col>
+    <Container id='bank'>
+      <Row className="g-3">
+        {sounds.map(
+          sound => (<Col xs={4}><DrumPad sound={sound} /></Col>)
+        )}
       </Row>
     </Container>
   )

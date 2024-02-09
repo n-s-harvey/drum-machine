@@ -13,6 +13,7 @@ export default function DrumPad(props) {
   const soundURL = props.sound.src;
   const [playSound] = useSound(soundURL);
   const dispatch = useDispatch();
+  // TODO: display doesn't trigger when clicking button
 
   useEffect(() => {
     function handleKeyDown(event) {
@@ -28,7 +29,9 @@ export default function DrumPad(props) {
   }
   )
   return (
-    <Button className="drum-pad" id={props.sound.id} onClick={playSound}>
+    <Button className="drum-pad" id={props.sound.id} onClick={playSound}
+      className='w-100' style={{ aspectRatio: 1 / 1 }}
+    >
       {props.sound.key}
     </Button>
   )
