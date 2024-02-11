@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 export default function Display() {
   const soundLastUsed = useSelector((state) => state.display.value);
   return (
-    <Container id='display'>
+    <Container id='display' className="text-center">
       {soundLastUsed}
     </Container>
   )
