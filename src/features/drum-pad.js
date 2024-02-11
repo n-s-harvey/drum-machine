@@ -36,6 +36,6 @@ export default function DrumPad(props) {
 
   function dispatchSoundAction() {
     playSound();
-    dispatch(setDisplay(props.sound.className));
+    dispatch(setDisplay(props.sound.displayName));
   }
 }
