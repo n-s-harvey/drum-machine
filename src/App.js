@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss'
 import Display from './features/display';
 import Bank from './features/bank';
