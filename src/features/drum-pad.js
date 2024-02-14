@@ -1,4 +1,3 @@
-import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Sound from "./sound";
 import useSound from "use-sound";
@@ -17,8 +16,7 @@ export default function DrumPad(props) {
   useEffect(() => {
     function handleKeyDown(event) {
       if (event.key.toUpperCase() == props.sound.key) {
-        playSound();
-        dispatch(setDisplay(props.sound.className));
+        dispatchSoundAction();
       }
     }
     document.addEventListener('keydown', handleKeyDown);
@@ -28,8 +26,15 @@ export default function DrumPad(props) {
   }
   )
   return (
-    <Button className="drum-pad" id={props.sound.id} onClick={playSound}>
+    <Button className="drum-pad w-100" id={props.sound.id} onClick={dispatchSoundAction}
+      style={{ aspectRatio: 1 / 1 }}
+    >
       {props.sound.key}
     </Button>
   )
+
+  function dispatchSoundAction() {
+    playSound();
+    dispatch(setDisplay(props.sound.displayName));
+  }
 }

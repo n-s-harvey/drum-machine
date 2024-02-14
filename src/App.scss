@@ -1,1 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
+
+#bank {
+  max-width: 500px;
+}
+
+#drum-machine {
+  height: 100vh;
+}
+
+#display {
+  font-size: 4em;
+}
+
+.drum-pad {
+  font-size: 2em;
+}
